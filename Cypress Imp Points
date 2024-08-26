@@ -1,0 +1,38 @@
+Cypress Imp Points
+npm run cypress:open
+
+1st describe (add Test SUite Name )-- is Test Suite 
+2nd it - block is one automation test , it blocks comes under describe 
+3rd FOr Record Test : Add -> experimentalstudio:True in cypress.config.js
+Limitations
+1st Cypress Studio is only available for E2E testting not for component testing.
+2nd Cypress Studio does not support writing tests that uses domains of mutiple origins.
+**Creation of 1st Cypress Automation test
+
+Logs:
+use log() function i.e. log('Test1 started') will display logs in runs
+
+Run Cypress test on diff Browsers
+1st Manually select browswer from drop down.
+2nd C:\Users\amits\Documents\Cypress>npx cypress run --browser edge --headed --spec "C:\Users\amits\Documents\Cypress\cypress\e2e\search.cy.js"
+
+// Hide fetch/XHR requests
+
+const app = window.top;
+if(!app.document.head.querySelector("[data-hide-command-log-request]")){
+    const style = app.document.createElement("style");
+    style.innerHTML=".command-name-request,.command-name-xhr {display-none}";
+    style.setAttribute("data-hide-command-log-request"," ");
+    app.document.head.appendChild(style);
+}
+
+##
+/// > refernce types ="Cypress" /> -- intelling help activation
+add a file jsconfig.json in root
+{
+    "include": ["./node_modules/cypress", "cypress/**/*.js"]
+}
+##
+Assertions
+
+## Selectors

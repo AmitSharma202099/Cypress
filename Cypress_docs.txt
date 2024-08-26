@@ -1,0 +1,80 @@
+Cypress:
+Install : 1st npm install cypress --save-dev
+	  2nd npm run cypress:open
+
+1st E2E : You can write your automation tests , creates.cy.js,create your test suite
+2nd fixtures: You can add your test data file e.g. json , xls ,csv 
+3rd support
+	command.js : Where you can overwrite the existing Cypress Commands or Write your custom commands 
+	e2e.js : Any code written here will be loaded before running in E2E
+
+node_modules: Contains all the utils javascript files plugin
+
+cypress.config.js All the configurations for the cypress for the specific configurations.
+
+package.json : specify the packages which is required by cypress & automation tests
+
+describe : is a test suite , you can add the test suite name
+it 	 : is a one automation test
+
+Cypress Studio: Where we can record & play the automation test using Cypress Studio
+		We need to specify below property in cypress.config.js file
+		experimentalStudio:true
+
+Cypress Studio Limitations:
+1st Currently available for only E2E Tests & doesn't yet work on component testing.
+2nd Dows not support testing that use domains of mutiple origins.
+
+##
+How to Create First Cypress Automation Test
+
+Logs
+
+## How to Run Cybress tests on Diff Browsers
+There are 2 ways
+1st Using Cypress Test Runner
+2nd Using Command Prompt --Refer below
+-npx cypress run --browser edge --headed--spec ".js.path"
+C:\Users\amits\Desktop\Cypress E2E\cypress\e2e\FirstCypressTest.cy.js
+
+
+## How to run Cypress in Headless mode
+-npx cypress run --browser edge --spec ".js.path"
+
+## How to stop auto re-run in cypress
+cypress.config.js , we need to add below flag
+watchForFileChanges:false
+
+##2@@
+Selectors ,XPath, Assertion
+2.1 Disable,Fetch and XHR logs
+2.2 Interlisense Code Compilation
+2.3 Assertions
+2.4 Selectors
+2.5 XPath
+2.6 Run Test From Visual Studio Code (VS Code)
+2.7 Dropdown and IFrames
+2.8 Scrolling Up/Down
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
